@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Report</title>
+</head>
+<body>
+    <h1>Member Report</h1>
+    <button onclick="goToHome()">Return to Reports Home</button>
+
+    {% if members_data %}
+        <table border="1">
+            <tr>
+                {% for field in selected_fields %}
+            <th>{{ field }}</th>
+                {% endfor %}
+            </tr>
+            {% for row in members_data %}
+                <tr>
+                    {% for value in row %}
+                        <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>No data to display.</p>
+    {% endif %}
+
+    <script>
+        function goToHome() {
+            window.location.href = '/report';
+        }
+    </script>
+</body>
+</html>

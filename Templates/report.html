@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Member Report</title>
+    </head>
+    <body>
+        <h1>Member Report</h1>
+        <button onclick="goToHome()">Return to Home Screen</button>
+        <form action="" method="post">
+            <fieldset>
+                <legend>Choose a Predefined Report:</legend>
+                <div>
+                    <button type="submit" name="preset" value="first_last">Names</button>
+                </div>
+                <br>
+                <div>
+                    <button type="submit" name="preset" value="first_last_email">Names and Emails</button>
+                </div>
+                <br>
+                <div>
+                    <button type="submit" name="preset" value="first_last_position">Names and Positions</button>
+                </div>
+            </fieldset>
+            <br>
+            <br>
+            <fieldset>
+                <legend>Select Data for a Custom Report:</legend>
+          
+                <div>
+                <input type="checkbox" id="FirstName" name="field" value="FirstName" />
+                <label for="FirstName">First Name</label>
+                </div>
+          
+                <div>
+                <input type="checkbox" id="LastName" name="field" value="LastName" />
+                <label for="LastName">Last Name</label>
+                </div>
+    
+                <div>
+                    <input type="checkbox" id="email" name="field" value="Email" />
+                    <label for="email">Email</label>
+                </div>
+    
+                <div>
+                    <input type="checkbox" id="age" name="field" value="Age"/>
+                    <label for="age">Age</label>
+                </div>
+    
+                <div>
+                    <input type="checkbox" id="phonenum" name="field" value="PhoneNum"/>
+                    <label for="phonenum">Phone Number</label>
+                </div>
+    
+                <div>
+                    <input type="checkbox" id="position" name="field" value="Position"/>
+                    <label for="position">Position</label>
+                </div>
+    
+            </fieldset>
+            <input type="submit" value="Submit" />
+        </form>
+        <script>
+            function goToHome() {
+              window.location.href = '/';
+            }
+          </script>
+    </body>  
+<html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OrgChart</title>
+</head>
+<body>
+  <h1>OrgChart</h1>
+  <button onclick="addMem()">Add Member</button>
+  <button onclick="removeMem()">Delete Member</button>
+  <button onclick="editMem()">Edit Member</button>
+  <button onclick="newReport()">Member Report</button>
+  <script>
+    function addMem() {
+      window.location.href = "/new";
+    }
+    function removeMem() {
+      window.location.href = "/delete";
+    }
+    function editMem() {
+      window.location.href = "/edit";
+    }
+    function newReport() {
+      window.location.href = "/report";
+    }
+  </script>
+</body>
+</html>
